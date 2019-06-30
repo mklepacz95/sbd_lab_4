@@ -19,6 +19,13 @@ public class SprzedazMongo {
     public SprzedazMongo() {
     }
 
+    public SprzedazMongo(OsobaMongo kupujacy, OsobaMongo sprzedajacy, PrzedmiotMongo przedmiot, List<OpiniaMongo> opinie) {
+        this.kupujacy = kupujacy;
+        this.sprzedajacy = sprzedajacy;
+        this.przedmiot = przedmiot;
+        this.opinie = opinie;
+    }
+
     public String getId() {
         return id;
     }

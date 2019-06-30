@@ -32,4 +32,8 @@ public class PrzedmiotMongoController {
     public long ile() {
         return przedmiotMongoRepo.count();
     }
+
+    public void usun() {
+        przedmiotMongoRepo.deleteAll();
+    }
 }

@@ -20,7 +20,7 @@ public class SprzedazMongoApi {
 
     @GetMapping("/sprzedaze")
     public List<SprzedazMongo> getAll() {
-        return sprzedazMongoController.getAll();
+        return sprzedazMongoController.getAllLimit();
     }
 
     @PostMapping("/sprzedaz")

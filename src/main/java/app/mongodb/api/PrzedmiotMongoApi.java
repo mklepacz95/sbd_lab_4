@@ -3,6 +3,8 @@ package app.mongodb.api;
 import app.mongodb.controller.PrzedmiotMongoController;
 import app.mongodb.dao.document.PrzedmiotMongo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,14 +21,15 @@ public class PrzedmiotMongoApi {
     public PrzedmiotMongoApi(PrzedmiotMongoController przedmiotMongoController) {
         this.przedmiotMongoController = przedmiotMongoController;
     }
+
     /*
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
+        przedmiotMongoController.usun();
         for(int i = 0; i < 5000;i++)
             przedmiotMongoController.save(new PrzedmiotMongo("Przedtmiot"+i,random.nextDouble()*100));
         System.out.println("Dodano 5 000 przedmiotow Mongo");
     }
-
      */
 
     @GetMapping("/przedmioty")

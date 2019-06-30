@@ -23,4 +23,12 @@ public class SprzedazMysqlContreoller {
         if(sprzedazMysqlRepo.save(sprzedazMysql) != null) return "Zapisano";
         else return  "Nie udalo sie zapisac";
     }
+
+    public long ile() {
+        return sprzedazMysqlRepo.count();
+    }
+
+    public void usun() {
+        sprzedazMysqlRepo.deleteAll();
+    }
 }

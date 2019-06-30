@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface OsobaMongoRepo extends MongoRepository<OsobaMongo, String> {
+    OsobaMongo findAllByImie(String imie);
 }

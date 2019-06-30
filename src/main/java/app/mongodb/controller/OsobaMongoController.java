@@ -29,4 +29,11 @@ public class OsobaMongoController {
         return osobaMongoRepo.count();
     }
 
+    public OsobaMongo findByImie(String imie) {
+        return osobaMongoRepo.findAllByImie(imie);
+    }
+
+    public void usun() {
+        osobaMongoRepo.deleteAll();
+    }
 }
